@@ -1,0 +1,25 @@
+version: '3'
+services:
+  hadoop-primary:
+    container_name: hadoop-primary
+    build: hadoop-base
+    ports:
+    - "9000:9000"
+    networks:
+    - default
+  hadoop-agent-1:
+    container_name: hadoop-agent-1
+    image: hadoop-base
+    ports:
+    - "50020:50020"
+    networks:
+    - default
+  hadoop-agent-2:
+    container_name: hadoop-agent-2
+    image: hadoop-base
+    ports:
+    - "50021:50020"
+    networks:
+    - default
+networks:
+  default:
