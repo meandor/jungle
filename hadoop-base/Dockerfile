@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
-RUN apt-get update && apt-get -y dist-upgrade && apt-get -y install openjdk-8-jdk-headless && openssh-server
-RUN cd /opt/ && wget http://apache.mirror.anlx.net/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz && tar xvf hadoop-3.1.1.tar.gz
+RUN apt-get update && apt-get -y dist-upgrade && apt-get -y install openjdk-8-jdk-headless openssh-server && apt-get -y autoclean
+RUN wget http://apache.mirror.anlx.net/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz -P /opt/  && tar xvf hadoop-3.1.1.tar.gz
 RUN useradd -ms /bin/bash hadoop
 ENV PATH="${PATH}:/opt/hadoop-3.1.1/bin"
 ENV HDFS_DATANODE_USER="hadoop"
