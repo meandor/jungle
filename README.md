@@ -1,6 +1,9 @@
 # Jungle
 Hadoop infrastructure setup on AWS and Dockerfiles.
 
+Read [this](http://hadoop.apache.org/docs/r3.1.1/hadoop-project-dist/hadoop-common/ClusterSetup.html#Installation) for a
+more detailed instruction on how to create a cluster. 
+
 ## Components
 
 ### NameNode
