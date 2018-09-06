@@ -19,6 +19,16 @@ and an index of all files.
 * 9000 (IPC for other components)
 * 9870 (web interface)
 
+### DataNode
+Part of HDFS. Stores actual data in a distributed fashion.
+
+[more](https://wiki.apache.org/hadoop/DataNode)
+
+#### Ports
+* 9866 (streaming)
+* 36203, 9864
+* 9867 (IPC)
+
 ## Run terraform
 Make sure to have your AWS credentials setup e.g. with aws cli.
 
